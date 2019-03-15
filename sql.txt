@@ -1,0 +1,19 @@
+// 创建数据表
+CREATE TABLE IF not exists image_finger
+(
+  imageId           INTEGER PRIMARY KEY  AUTOINCREMENT,
+  imageName         TEXT NOT NULL,
+  imageTags         TEXT,
+  imageFinger       TEXT NOT NULL,
+  imageAbsolutePath TEXT NOT NULL,
+  time              TEXT not null,
+  imageMirrorPtah   TEXT not null,
+  distance          INTEGER
+);
+
+//创建索引
+CREATE INDEX if not exists finger_index
+  on image_finger (imageFinger, imageAbsolutePath);
+  //创建唯一索引
+CREATE INDEX if not exists image_path_index
+  on image_finger (imageAbsolutePath);
