@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: controlsfx-8.40.14.jar;sqlite-jdbc-3.23.1.jar
+Main-Class: sample.Main
+
