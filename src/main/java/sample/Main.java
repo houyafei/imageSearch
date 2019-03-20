@@ -81,6 +81,12 @@ public class Main extends Application {
 
     private StackPane stackPane = null;
 
+    private VBox showBigImageVBosx = new VBox();
+    private ImageView showBigImage = new ImageView();
+    private Pagination pagination = new Pagination();
+
+    private SearchServiceResult serviceResult = null;
+
     @Override
     public void start(final Stage stage) throws Exception {
         searchImage(stage);
@@ -88,31 +94,10 @@ public class Main extends Application {
     }
 
 
-    public FlowPane addFlowPane() {
-        FlowPane flow = new FlowPane();
-        flow.setPadding(new Insets(5, 0, 5, 0));
-        flow.setVgap(4);
-        flow.setHgap(4);
-//        flow.setPrefWrapLength(170); // 预设FlowPane的宽度，使其能够显示两列
-
-        ImageView pages[] = new ImageView[5];
-        for (int i = 0; i < 5; i++) {
-            pages[i] = new ImageView(
-                    new Image(getClass().getResourceAsStream("/images/" + imageNames[i])));
-            pages[i].setFitWidth(100);
-            pages[i].setFitHeight(100);
-            int finalI = i;
-            pages[i].setOnMouseClicked(event -> System.out.println(finalI));
-            flow.getChildren().add(pages[i]);
-        }
-
-        return flow;
-    }
-
     private void searchImage(Stage primaryStage) {
         primaryStage.setTitle("ImageSearch");
         BorderPane root = new BorderPane();
-        Scene scene = new Scene(root, 800, 800);
+        Scene scene = new Scene(root, 850, 800);
         root.setBackground(new Background(new BackgroundImage(new Image("/images/back.jpg"), null, null, BackgroundPosition.CENTER, BackgroundSize.DEFAULT)));
         VBox vBox = new VBox();
         MenuBar menuBar = setMenuBar(primaryStage);
@@ -135,6 +120,25 @@ public class Main extends Application {
         stackPane.getChildren().add(addGridView());
         addSearchPane(root, primaryStage);
 
+
+        pagination.getStyleClass().add(Pagination.STYLE_CLASS_BULLET);
+        pagination.setPageFactory(value->{
+            VBox vBox1 = new VBox();
+            vBox1.setAlignment(Pos.CENTER);
+            vBox1.setBackground(new Background(new BackgroundImage(new Image("/images/back.jpg"), null, null, BackgroundPosition.CENTER, BackgroundSize.DEFAULT)));
+
+            ImageView imageView = new ImageView();
+            imageView.setFitHeight(500);
+            imageView.setFitHeight(700);
+            try {
+                imageView.setImage(ImageUtils.bufferImage2Image(ImageIO.read(new File(serviceResult.getListPath().get(value-1)))));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            vBox1.getChildren().add(imageView);
+            return vBox1 ;
+        });
+
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -143,7 +147,17 @@ public class Main extends Application {
         GridView<Image> myGrid = new GridView<>(list);
         myGrid.setCellFactory(gridView -> {
             ImageGridCell imageGridCell = new ImageGridCell();
-            imageGridCell.setOnMouseClicked(event -> System.out.println(imageGridCell.getIndex()));
+            imageGridCell.setOnMouseClicked(event -> {
+                stackPane.getChildren().add(pagination);
+                System.out.println(imageGridCell.getIndex());
+                int index = imageGridCell.getIndex();
+//                try {
+//                    showBigImage.setImage(ImageUtils.bufferImage2Image(ImageIO.read(new File(serviceResult.getListPath().get(index)))));
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+                pagination.setCurrentPageIndex(index + 1);
+            });
             return imageGridCell;
         });
         myGrid.setCellHeight(200);
@@ -157,7 +171,7 @@ public class Main extends Application {
 
     private void addSearchPane(BorderPane root, Stage primaryStage) {
         VBox vBox = new VBox(20);
-        vBox.setPrefWidth(200);
+        vBox.setPrefWidth(180);
         vBox.setAlignment(Pos.TOP_CENTER);
         ImageView imageView = new ImageView("/images/search-1.png");
         imageView.setFitHeight(150);
@@ -190,12 +204,13 @@ public class Main extends Application {
                     progressBar.progressProperty().bind(searchImagesService.progressProperty());
                     progressLabel.textProperty().bind(searchImagesService.messageProperty());
                     searchImagesService.setOnSucceeded(result -> {
-                        SearchServiceResult serviceResult = searchImagesService.getValue();
+                        serviceResult = searchImagesService.getValue();
 
                         Platform.runLater(() -> {
                             list.addAll(serviceResult.getListImage());
                             hBox.getChildren().removeAll(progressBar);
                             hBox.setVisible(false);
+                            pagination.setPageCount(serviceResult.getListImage().size());
                         });
                     });
 
