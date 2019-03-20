@@ -1,5 +1,7 @@
-/META-INF/
-/.idea/
+/META-INF
+/.idea
 imageSearch.db
 sql.txt
 test.db
+/out
+*.class

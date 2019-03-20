@@ -9,7 +9,8 @@ public class ConstUtil {
             "  imageTags         TEXT," +
             "  imageFinger       TEXT NOT NULL," +
             "  imageAbsolutePath TEXT NOT NULL," +
-            "  time              DATE NOT null," +
+            "  time              DATE NOT NULL," +
+            "  nailImage         BLOB NOT NULL," +
             "  distance          INTEGER" +
             ");" +
             "CREATE INDEX IF NOT EXISTS finger_index" +
@@ -17,20 +18,20 @@ public class ConstUtil {
             "CREATE UNIQUE INDEX IF NOT EXISTS image_path_index" +
             "  on image_finger (imageAbsolutePath);";
     public static final String SQL_INSERT_IMAGE_FINGER = "" +
-            "INSERT INTO image_finger (imageName, imageTags, imageFinger, imageAbsolutePath, time, distance)" +
-            "VALUES (?, ?, ?, ?, ?, ?);";
+            "INSERT INTO image_finger (imageName, imageTags, imageFinger, imageAbsolutePath, time, nailImage, distance)" +
+            "VALUES (?, ?, ?, ?, ?, ?, ?);";
     public static final String SQL_QUERY_ALL = "" +
-            "SELECT imageId,imageName, imageTags, imageFinger, imageAbsolutePath,time,distance FROM image_finger;";
-    public static final String SQL_DELETE_IMAGE_FINGER_BY_ID = "" +
-            "DELETE FROM image_finger WHERE imageId = ?";
-    public static final String SQL_DELETE_IMAGE_FINGER_BY_IMAGE_PATH = "" +
-            "DELETE FROM image_finger WHERE imageAbsolutePath = ?";
+            "SELECT imageId,imageName, imageTags, imageFinger, imageAbsolutePath, time, distance FROM image_finger;";
+    public static final String SQL_SELECT_NAIL_IMAGE_BY_ID = "" +
+            "SELECT nailImage FROM image_finger WHERE imageId = ?";
+    public static final String SQL_SELECT_IMAGE_FINGER_BY_IMAGE_PATH = "" +
+            "SELECT FROM image_finger WHERE imageAbsolutePath = ?";
     public static final String SQL_UPDATE_BY_IMAGE_FINGER = "" +
             "UPDATE image_finger " +
             "SET imageName=?, imageTags=?, imageFinger=?, distance=?  WHERE imageAbsolutePath=?;";
     public static final String SQL_REPLACE_IMAGE_FINGER = "" +
-            "REPLACE INTO image_finger (imageName, imageTags, imageFinger, imageAbsolutePath,time,distance) " +
-            "VALUES (?,?,?,?,?,?) ;";
+            "REPLACE INTO image_finger (imageName, imageTags, imageFinger, imageAbsolutePath, time, nailImage, distance)" +
+            "VALUES (?, ?, ?, ?, ?, ?, ?);";
 
     public static final String KEY_IMAGEID = "imageId";
     public static final String KEY_IMAGENAME = "imageName";
@@ -39,6 +40,7 @@ public class ConstUtil {
     public static final String KEY_IMAGEABSOLUTEPATH = "imageAbsolutePath";
     public static final String KEY_TIME = "time";
     public static final String KEY_DISTANCE = "distance";
+    public static final String KEY_NAILIMAGE = "nailImage";
 
     public static final String IMAGE_REG = ".+(.JPEG|.jpeg|.JPG|.jpg|.png|.tif)$";
 }

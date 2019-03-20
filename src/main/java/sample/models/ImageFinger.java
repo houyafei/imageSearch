@@ -1,5 +1,7 @@
 package sample.models;
 
+
+import java.awt.image.BufferedImage;
 import java.sql.Date;
 
 public class ImageFinger {
@@ -14,21 +16,19 @@ public class ImageFinger {
     private Date time;
     private int distance;
 
+    private BufferedImage nailImage;
+
     public ImageFinger() {
     }
 
-    public ImageFinger(String imageName,
-                       String imageTags,
-                       String imageFinger,
-                       String imageAbsolutePath,
-                       Date time,
-                       int distance) {
+    public ImageFinger(String imageName, String imageTags, String imageFinger, String imageAbsolutePath, Date time, int distance, BufferedImage nailImage) {
         this.imageName = imageName;
         this.imageTags = imageTags;
         this.imageFinger = imageFinger;
         this.imageAbsolutePath = imageAbsolutePath;
         this.time = time;
         this.distance = distance;
+        this.nailImage = nailImage;
     }
 
     public ImageFinger(int imageId,
@@ -115,6 +115,14 @@ public class ImageFinger {
 
     public void setDistance(int distance) {
         this.distance = distance;
+    }
+
+    public BufferedImage getNailImage() {
+        return nailImage;
+    }
+
+    public void setNailImage(BufferedImage nailImage) {
+        this.nailImage = nailImage;
     }
 
     @Override

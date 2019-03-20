@@ -4,10 +4,14 @@ import javafx.application.Application;
 
 
 import javafx.application.Platform;
+import javafx.beans.property.StringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -32,6 +36,7 @@ import org.controlsfx.control.GridView;
 import org.controlsfx.control.cell.ImageGridCell;
 import sample.db.SQLiteJDBC;
 import sample.models.ImageFinger;
+import sample.models.SearchServiceResult;
 import sample.services.CalculateFingerPrinterService;
 import sample.services.SaveImageService;
 import sample.services.SearchImagesService;
@@ -46,8 +51,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
+
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -72,6 +77,9 @@ public class Main extends Application {
     private Label progressLabel = new Label("图片处理中");
     private ProgressBar progressBar = new ProgressBar(-1);
     private HBox hBox = new HBox();
+
+
+    private StackPane stackPane = null;
 
     @Override
     public void start(final Stage stage) throws Exception {
@@ -111,100 +119,91 @@ public class Main extends Application {
         vBox.getChildren().add(menuBar);
 
         hBox.setPrefWidth(700);
+        progressBar.setPrefWidth(400);
+        hBox.getChildren().addAll(progressBar);
         hBox.getChildren().add(progressLabel);
         hBox.setAlignment(Pos.CENTER);
+        hBox.getChildren().removeAll(progressBar);
         hBox.setVisible(false);
+
 
         vBox.getChildren().add(hBox);
         root.setTop(vBox);
 
+        stackPane = new StackPane();
+        root.setCenter(stackPane);
+        stackPane.getChildren().add(addGridView());
         addSearchPane(root, primaryStage);
-        if (srcImage != null) {
-            addGridView(root, primaryStage);
-        }
-
 
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
-    private void addGridView(BorderPane root, Stage primaryStage) {
+    private GridView<Image> addGridView() {
         GridView<Image> myGrid = new GridView<>(list);
         myGrid.setCellFactory(gridView -> {
             ImageGridCell imageGridCell = new ImageGridCell();
             imageGridCell.setOnMouseClicked(event -> System.out.println(imageGridCell.getIndex()));
             return imageGridCell;
         });
-        myGrid.setCellHeight(140);
+        myGrid.setCellHeight(200);
         myGrid.setCellWidth(140);
         myGrid.setHorizontalCellSpacing(5);
         myGrid.setVerticalCellSpacing(5);
         myGrid.getItems().addListener((ListChangeListener<Image>) c -> {
         });
-        root.setCenter(myGrid);
-
+        return myGrid;
     }
 
     private void addSearchPane(BorderPane root, Stage primaryStage) {
         VBox vBox = new VBox(20);
-        vBox.setAlignment(Pos.CENTER);
+        vBox.setPrefWidth(200);
+        vBox.setAlignment(Pos.TOP_CENTER);
         ImageView imageView = new ImageView("/images/search-1.png");
         imageView.setFitHeight(150);
         imageView.setFitWidth(150);
-        ImageView srcImageView = new ImageView();
-        srcImageView.setFitWidth(150);
-        srcImageView.setFitHeight(150);
-        Text text = new Text("Begin Search My Image");
-        text.setFont(Font.font(18));
-        imageView.setOnMouseClicked(event -> {
+        Button searchBtn = new Button("Search Now");
+        searchBtn.setPrefWidth(150);
+        vBox.getChildren().add(imageView);
+        vBox.getChildren().add(searchBtn);
+        vBox.getChildren().add(new Separator());
+        root.setLeft(vBox);
+
+        searchBtn.setOnAction(searchEventEventHandler(primaryStage, imageView));
+
+    }
+
+    private EventHandler<ActionEvent> searchEventEventHandler(Stage primaryStage, ImageView imageView) {
+        return event -> {
             final FileChooser fileChooser = new FileChooser();
             configureFileChooser(fileChooser);
             File file = fileChooser.showOpenDialog(primaryStage);
             if (file != null) {
-                System.out.println(file.getPath());
                 try {
                     srcImage = ImageIO.read(file);
-                    srcImageView.setImage(ImageUtils.bufferImage2Image(srcImage));
-
+                    imageView.setImage(ImageUtils.bufferImage2Image(srcImage));
+                    list.remove(0, list.size());
                     hBox.setVisible(true);
+                    hBox.getChildren().add(progressBar);
                     SearchImagesService searchImagesService = new SearchImagesService(new FileInputStream(file));
                     searchImagesService.start();
+                    progressBar.progressProperty().bind(searchImagesService.progressProperty());
                     progressLabel.textProperty().bind(searchImagesService.messageProperty());
                     searchImagesService.setOnSucceeded(result -> {
-                        List<String> listImages = searchImagesService.getValue();
-                        new Thread(() -> {
-                            List<Image> listImage = new ArrayList<>(listImages.size());
-                            listImages.forEach(ele -> {
-                                try {
-                                    Image tempImage = ImageUtils.bufferImage2Image(ImageIO.read(new File(ele)));
-                                    listImage.add(tempImage);
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                            });
-                            Platform.runLater(() -> {
-                                list.remove(0, list.size());
-                                list.addAll(listImage);
-                                hBox.setVisible(false);
-                            });
-                        }
-                        ).start();
+                        SearchServiceResult serviceResult = searchImagesService.getValue();
+
+                        Platform.runLater(() -> {
+                            list.addAll(serviceResult.getListImage());
+                            hBox.getChildren().removeAll(progressBar);
+                            hBox.setVisible(false);
+                        });
                     });
 
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                imageView.setImage(new Image("/images/search.jpg"));
-                VBox vBox2 = new VBox(5, srcImageView, imageView);
-                vBox2.setPadding(new Insets(40, 10, 10, 10));
-                root.setLeft(vBox2);
-                root.setCenter(null);
-                addGridView(root, primaryStage);
             }
-        });
-        vBox.getChildren().addAll(imageView, text);
-        root.setCenter(vBox);
-
+        };
     }
 
     private MenuBar setMenuBar(Stage primaryStage) {
@@ -221,20 +220,11 @@ public class Main extends Application {
             List<File> list = fileChooser.showOpenMultipleDialog(primaryStage);
             if (list != null) {
                 list.forEach((file) -> {
-                    try {
-                        CalculateFingerPrinterService cpService = new CalculateFingerPrinterService(new FileInputStream(file));
-                        cpService.start();
-                        cpService.setOnSucceeded(result -> {
-                            System.out.println("结果：--" + cpService.getValue());
-                            String printerFinger = cpService.getValue();
-                            ImageFinger imageEle = new ImageFinger(file.getName(), file.getName(), printerFinger, file.getAbsolutePath(), new Date(System.currentTimeMillis()), 0);
-                            SQLiteJDBC.insertData(imageEle);
-                        });
-
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    }
-
+                    CalculateFingerPrinterService cpService = new CalculateFingerPrinterService(file);
+                    cpService.start();
+                    cpService.setOnSucceeded(result -> {
+                        System.out.println("结果：--" + cpService.getValue());
+                    });
                 });
 
 
@@ -269,115 +259,12 @@ public class Main extends Application {
     }
 
 
-    private void OpenPicture(Stage stage) {
-        stage.setTitle("File Chooser Sample");
-
-        final FileChooser fileChooser = new FileChooser();
-
-        final Button openButton = new Button("Open a Picture...");
-        final Button openMultipleButton = new Button("Open Pictures...");
-
-        openButton.setOnAction(
-                (final ActionEvent e) -> {
-                    configureFileChooser(fileChooser);
-                    File file = fileChooser.showOpenDialog(stage);
-                    if (file != null) {
-                        openFile(file);
-                    }
-                });
-        openMultipleButton.setOnAction(
-                (final ActionEvent e) -> {
-                    configureFileChooser(fileChooser);
-                    List<File> list =
-                            fileChooser.showOpenMultipleDialog(stage);
-                    if (list != null) {
-                        list.stream().forEach((file) -> {
-                            openFile(file);
-                        });
-                    }
-                });
-
-        final GridPane inputGridPane = new GridPane();
-
-        GridPane.setConstraints(openButton, 0, 0);
-        GridPane.setConstraints(openMultipleButton, 1, 0);
-        inputGridPane.setHgap(6);
-        inputGridPane.setVgap(6);
-        inputGridPane.getChildren().addAll(openButton, openMultipleButton);
-
-        final Pane rootGroup = new VBox(12);
-        rootGroup.getChildren().addAll(inputGridPane);
-        rootGroup.setPadding(new Insets(12, 12, 12, 12));
-
-        stage.setScene(new Scene(rootGroup));
-        stage.show();
-    }
-
-
     private static void configureFileChooser(final FileChooser fileChooser) {
         fileChooser.setTitle("View Pictures");
         fileChooser.setInitialDirectory(
                 new File(System.getProperty("user.home"))
         );
     }
-
-    private void openFile(File file) {
-        EventQueue.invokeLater(() -> {
-            try {
-                System.out.println(file.getAbsolutePath());
-                desktop.open(file);
-                Logger.getLogger("path:" + file.getAbsolutePath());
-            } catch (IOException ex) {
-                Logger.getLogger(Main.
-                        class.getName()).
-                        log(Level.SEVERE, null, ex);
-            }
-        });
-    }
-
-
-    private void login(Stage primaryStage) {
-        //createBtn(primaryStage);
-        primaryStage.setTitle("ImageSearch Welcome");
-        primaryStage.show();
-
-        GridPane grid = new GridPane();
-        grid.setAlignment(Pos.CENTER);
-        grid.setHgap(10);
-        grid.setVgap(10);
-        grid.setPadding(new Insets(25, 25, 25, 25));
-        Scene scene = new Scene(grid, 800, 275);
-        primaryStage.setScene(scene);
-        Text sceneTitle = new Text("welcome");
-        sceneTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
-        grid.add(sceneTitle, 0, 0, 2, 1);
-
-        Label userName = new Label("UserName:");
-        grid.add(userName, 0, 1);
-
-        TextField userTextField = new TextField();
-        grid.add(userTextField, 1, 1);
-
-        Label pw = new Label("Password:");
-        grid.add(pw, 0, 2);
-
-        PasswordField pwBox = new PasswordField();
-        grid.add(pwBox, 1, 2);
-    }
-
-    private void createBtn(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("SayHello");
-        btn.setOnAction(event -> System.out.println("Heeeeeeeeellllllllooooo"));
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        Scene scene = new Scene(root, 300, 250);
-
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-
 
     public static void main(String[] args) {
         launch(args);

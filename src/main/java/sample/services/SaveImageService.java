@@ -2,13 +2,19 @@ package sample.services;
 
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
+import javafx.scene.image.Image;
 import sample.db.SQLiteJDBC;
 import sample.models.ImageFinger;
 import sample.utils.ConstUtil;
+import sample.utils.ImageUtils;
 import sample.utils.PHashFingerPrinter;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -45,7 +51,7 @@ public class SaveImageService extends Service<String> {
             protected void succeeded() {
                 super.succeeded();
                 System.out.println("this file printer:" + SaveImageService.this.getValue());
-                updateMessage("i am ok");
+                updateMessage("");
             }
 
             private void findImage(String filePath) {
@@ -63,10 +69,18 @@ public class SaveImageService extends Service<String> {
                     Matcher matcher = pattern.matcher(subFile);
                     if (matcher.find()) {
                         try {
+
                             String finger = phash.getHash(new FileInputStream(filePath));
                             count += 1;
                             new Thread(() -> {
-                                ImageFinger imageEle = new ImageFinger(file.getName(), file.getName(), finger, file.getAbsolutePath(), new Date(System.currentTimeMillis()), 0);
+                                BufferedImage nailImage = null;
+                                try {
+                                    nailImage = phash.resize(ImageIO.read(new FileInputStream(filePath)), 140, 200);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                ImageFinger imageEle = new ImageFinger(file.getName(), file.getName(), finger,
+                                        file.getAbsolutePath(), new Date(System.currentTimeMillis()), 0, nailImage);
                                 SQLiteJDBC.insertData(imageEle);
                             }).start();
                             updateMessage("已经整理图片：" + count + "张");

@@ -7,76 +7,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ImageSearch.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5c0db18a-ad97-479c-83a1-2e9741f781c0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5c0db18a-ad97-479c-83a1-2e9741f781c0/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f7993073-646d-42af-870e-df1cb2952c6c.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f7993073-646d-42af-870e-df1cb2952c6c/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/controlsfx_8_40_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.ignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ImageSearch.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imageSearch.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/controlsfx-8.40.14.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/sqlite-jdbc-3.23.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/images/back.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/images/search-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/images/search-sm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/images/search.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/Controller.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/db/JDBCAdapter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/db/JDBCConnectionUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/db/JDBCPool.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/db/Member.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/db/SQLiteJDBC.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/models/ImageFinger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/sample.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/CalculateFingerPrinterService$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/CalculateFingerPrinterService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/SaveImageService$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/SaveImageService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/SearchImagesService$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/SearchImagesService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/utils/ConstUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/utils/ImageUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/utils/PHashFingerPrinter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/utils/TimeServiceUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ImageSearch/sql-pro.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/db/JDBCAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/db/JDBCConnectionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/db/JDBCPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/db/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/db/SQLiteJDBC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/models/ImageFinger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/sample.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/services/CalculateFingerPrinterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/services/SaveImageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/services/SearchImagesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/utils/ConstUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/utils/ImageUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/utils/PHashFingerPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/utils/TimeServiceUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/back.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/search-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/search-sm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/search.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql-pro.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/models/SearchServiceResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/services/test.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ImageSearch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ImageSearch.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f7993073-646d-42af-870e-df1cb2952c6c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f7993073-646d-42af-870e-df1cb2952c6c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageSearch.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/db/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/db/SQLiteJDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/db/SQLiteJDBC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/models/ImageFinger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/models/ImageFinger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/CalculateFingerPrinterService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/CalculateFingerPrinterService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/CalculateFingerPrinterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/CalculateFingerPrinterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/SaveImageService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/SaveImageService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/SaveImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/SaveImageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/SearchImagesService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/SearchImagesService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/SearchImagesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/services/SearchImagesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/utils/ConstUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/utils/ConstUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/utils/ImageUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/utils/ImageUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImageSearch/sample/utils/PHashFingerPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImageSearch/sample/utils/PHashFingerPrinter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/db/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/db/SQLiteJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/db/SQLiteJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/models/ImageFinger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/models/ImageFinger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/services/CalculateFingerPrinterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/services/CalculateFingerPrinterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/services/SaveImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/services/SaveImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/services/SearchImagesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/services/SearchImagesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/utils/ConstUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/utils/ConstUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/utils/ImageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/utils/ImageUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/utils/PHashFingerPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/utils/PHashFingerPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,6 +78,13 @@
         <item name="imageSearch" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="imageSearch" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+        <item name="image_finger: table" type="ffe0bd85:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -162,47 +131,51 @@
     <session id="652822081">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="3" />
           <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.31" value="2" />
+          <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="6" />
-          <entry key="JAVA" value="6499" />
-          <entry key="PLAIN_TEXT" value="145" />
+          <entry key="JAVA" value="8401" />
+          <entry key="PLAIN_TEXT" value="166" />
           <entry key="Properties" value="12" />
           <entry key="Scratch" value="219" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="13" />
+          <entry key="CLASS" value="20" />
           <entry key="CSS" value="3" />
-          <entry key="Database Element" value="14" />
+          <entry key="Database Element" value="19" />
           <entry key="GUI_DESIGNER_FORM" value="1" />
           <entry key="HTML" value="1" />
           <entry key="Image" value="9" />
-          <entry key="JAVA" value="100" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="JAVA" value="147" />
+          <entry key="Manifest" value="1" />
+          <entry key="PLAIN_TEXT" value="4" />
           <entry key="Properties" value="2" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="9" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -213,56 +186,41 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/services/SearchImagesService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="482">
+              <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.ignore">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="131">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/SQLiteJDBC.java">
+        <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/geometry/Insets.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+            <state relative-caret-position="-231">
+              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/scene/layout/StackPane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-815">
+              <caret line="190" column="39" selection-start-line="190" selection-start-column="23" selection-end-line="190" selection-end-column="39" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#7314#7315#0" expanded="true" />
+                <element signature="e#7337#7338#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/utils/PHashFingerPrinter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="35" selection-start-line="35" selection-end-line="38" />
-              <folding>
-                <element signature="e#338#339#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/utils/ConstUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="22" column="112" selection-start-line="22" selection-start-column="112" selection-end-line="22" selection-end-column="112" />
             </state>
           </provider>
         </entry>
@@ -270,11 +228,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/services/CalculateFingerPrinterService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+            <state relative-caret-position="819">
+              <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/JDBCPool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1092">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
         </entry>
@@ -282,8 +249,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/services/SaveImageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="1302">
+              <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -292,29 +259,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/utils/ImageUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="67" column="39" lean-forward="true" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#addFlowPane#0;class#Main#0" />
-                <element signature="e#7321#8382#0" />
-                <element signature="method#openFile#0;class#Main#0" />
-                <element signature="method#login#0;class#Main#0" />
-                <element signature="method#createBtn#0;class#Main#0" />
-                <element signature="e#13781#13782#0" expanded="true" />
-                <element signature="e#13809#13810#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/JDBCConnectionUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-399">
-              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+            <state relative-caret-position="399">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -325,6 +273,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -342,7 +291,6 @@
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/utils/ImageUtils.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/utils/ImageUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/db/JDBCAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/utils/TimeUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sql-pro.properties" />
@@ -352,17 +300,22 @@
         <option value="$PROJECT_DIR$/src/main/java/sample/services/CaculatFingerPrinterService.java" />
         <option value="$PROJECT_DIR$/sql.txt" />
         <option value="$PROJECT_DIR$/src/main/java/sample/services/SearchImages.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/models/ImageFinger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/services/CalculateFingerPrinterService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/services/SaveImageService.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f7993073-646d-42af-870e-df1cb2952c6c/console_1.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f7993073-646d-42af-870e-df1cb2952c6c/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/db/SQLiteJDBC.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/utils/ConstUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/utils/PHashFingerPrinter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/services/SearchImagesService.java" />
         <option value="$PROJECT_DIR$/.ignore" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/models/SearchServiceResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/models/ImageFinger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/utils/ConstUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/utils/ImageUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/utils/PHashFingerPrinter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/services/CalculateFingerPrinterService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/services/SaveImageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/db/SQLiteJDBC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/services/SearchImagesService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/Main.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/services/test.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/Main.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -374,10 +327,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="859" />
-    <option name="y" value="75" />
-    <option name="width" value="1237" />
-    <option name="height" value="1103" />
+    <option name="x" value="652" />
+    <option name="y" value="70" />
+    <option name="width" value="1235" />
+    <option name="height" value="1067" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -388,8 +341,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -400,7 +353,55 @@
             <path>
               <item name="ImageSearch" type="b2602c69:ProjectViewProjectNode" />
               <item name="ImageSearch" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageSearch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageSearch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageSearch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageSearch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageSearch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageSearch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageSearch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageSearch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageSearch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageSearch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageSearch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageSearch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ImageSearch" type="b2602c69:ProjectViewProjectNode" />
@@ -423,7 +424,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552655424563" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553087758339" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="dynamic.classpath" value="false" />
@@ -624,16 +625,21 @@
       <workItem from="1552543331906" duration="15994000" />
       <workItem from="1552618641410" duration="466000" />
       <workItem from="1552619141892" duration="21453000" />
+      <workItem from="1552656012467" duration="10000" />
+      <workItem from="1552871984079" duration="25010000" />
+      <workItem from="1552958472972" duration="3889000" />
+      <workItem from="1553046845760" duration="5363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101065000" />
+    <option name="totallyTimeSpent" value="135337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="2491" height="1291" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15092024" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15582822" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -642,26 +648,26 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32982457" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29122806" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.24736843" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2592267" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.24692443" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32952547" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32952547" />
       <window_info anchor="bottom" id="Problems" order="9" />
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Terminal" order="15" weight="0.36929825" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.09314587" />
+      <window_info anchor="bottom" id="Database Changes" order="14" weight="0.32952547" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="15" visible="true" weight="0.36906853" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.29649124" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="JetGradle" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.15337424" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.09038855" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="right" id="PlantUML" order="7" />
@@ -749,85 +755,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/Member.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/src.zip!/javax/sql/DataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/src.zip!/java/sql/PreparedStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="491" column="9" selection-start-line="491" selection-start-column="9" selection-end-line="491" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/sqlite-jdbc-3.23.1.jar!/org/sqlite/jdbc3/JDBC3PreparedStatement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/JDBCAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/JDBCPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/images/search-1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/images/search-sm.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/images/search.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/images/back.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utils/sss.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utils/sss.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/Label.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-259">
-          <caret line="63" column="11" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="11" />
-          <folding>
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1701#1702#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/Control.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-798">
@@ -846,26 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/services/SaveImageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/services/CalculateFingerPrinterService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/src.zip!/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -880,89 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/concurrent/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="727" selection-start-line="727" selection-end-line="727" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/concurrent/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="1462" selection-start-line="1462" selection-end-line="1462" />
-          <folding>
-            <element signature="e#44577#44578#0" expanded="true" />
-            <element signature="e#44638#44639#0" expanded="true" />
-            <element signature="e#51037#51038#0" expanded="true" />
-            <element signature="e#51073#51074#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/models/ImageFinger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1483">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f7993073-646d-42af-870e-df1cb2952c6c/console_1.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -972,41 +796,6 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f7993073-646d-42af-870e-df1cb2952c6c/console_2.sql">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/JDBCConnectionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/ProgressIndicator.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1023,41 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utils/ConstUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="22" column="112" selection-start-line="22" selection-start-column="112" selection-end-line="22" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f7993073-646d-42af-870e-df1cb2952c6c/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1065,20 +819,185 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/SQLiteJDBC.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+        <state relative-caret-position="105">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utils/TimeServiceUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/scene/image/ImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="1071" column="22" selection-start-line="1071" selection-start-column="22" selection-end-line="1071" selection-end-column="22" />
+          <folding>
+            <element signature="e#45769#45770#0" expanded="true" />
+            <element signature="e#45811#45812#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/concurrent/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4254">
+          <caret line="1133" column="19" selection-start-line="1133" selection-start-column="19" selection-end-line="1133" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/concurrent/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="363" column="22" selection-start-line="363" selection-start-column="22" selection-end-line="363" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/controlsfx-8.40.14.jar!/org/controlsfx/control/action/Action.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/beans/property/StringProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="49" column="48" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/models/SearchServiceResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/Member.java" />
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/scene/image/WritableImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/scene/image/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-806">
+          <caret line="69" column="82" selection-start-line="69" selection-start-column="82" selection-end-line="69" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/src.zip!/java/awt/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/src.zip!/java/awt/image/BufferedImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/src.zip!/javax/imageio/ImageIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="1345" column="28" selection-start-line="1345" selection-start-column="28" selection-end-line="1345" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/src.zip!/java/sql/Blob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/src.zip!/javax/sql/rowset/serial/SerialBlob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/sqlite-jdbc-3.23.1.jar!/org/sqlite/jdbc4/JDBC4PreparedStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/sqlite-jdbc-3.23.1.jar!/org/sqlite/javax/SQLitePooledConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/sqlite-jdbc-3.23.1.jar!/org/sqlite/javax/SQLiteConnectionPoolDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/JDBCAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/sqlite-jdbc-3.23.1.jar!/org/sqlite/jdbc4/JDBC4Connection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/sqlite-jdbc-3.23.1.jar!/org/sqlite/SQLiteConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1134">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/sqlite-jdbc-3.23.1.jar!/org/sqlite/jdbc4/JDBC4Statement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-183">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/utils/PHashFingerPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="35" selection-start-line="35" selection-end-line="38" />
+        <state relative-caret-position="126">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding>
             <element signature="e#338#339#0" expanded="true" />
             <element signature="e#372#373#0" expanded="true" />
@@ -1086,37 +1005,145 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utils/ConstUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="67" column="39" lean-forward="true" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addFlowPane#0;class#Main#0" />
-            <element signature="e#7321#8382#0" />
-            <element signature="method#openFile#0;class#Main#0" />
-            <element signature="method#login#0;class#Main#0" />
-            <element signature="method#createBtn#0;class#Main#0" />
-            <element signature="e#13781#13782#0" expanded="true" />
-            <element signature="e#13809#13810#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="693">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f7993073-646d-42af-870e-df1cb2952c6c/schema/main/table/image_finger">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/services/SearchImagesService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+        <state relative-caret-position="1113">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.ignore">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/models/ImageFinger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        <state relative-caret-position="462">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1913#1914#0" expanded="true" />
+            <element signature="e#1943#1944#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/SQLiteJDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#batchInsert#0;class#SQLiteJDBC#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/JDBCConnectionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/services/CalculateFingerPrinterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/db/JDBCPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/services/SaveImageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1302">
+          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/utils/ImageUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/scene/layout/StackPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-815">
+          <caret line="190" column="39" selection-start-line="190" selection-start-column="23" selection-end-line="190" selection-end-column="39" />
+          <folding>
+            <element signature="e#7314#7315#0" expanded="true" />
+            <element signature="e#7337#7338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/geometry/Insets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/services/test.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/scene/layout/VBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4742">
+          <caret line="221" column="11" selection-start-line="221" selection-start-column="11" selection-end-line="221" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_191/javafx-src.zip!/javafx/scene/layout/Region.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="558" column="37" selection-start-line="558" selection-start-column="37" selection-end-line="558" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1170,6 +1197,8 @@
         <settings>
           <artifact-editor>
             <show-content>
+              <type id="library" />
+              <type id="jpa-descriptors" />
               <type id="artifact" />
             </show-content>
           </artifact-editor>
@@ -1227,6 +1256,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

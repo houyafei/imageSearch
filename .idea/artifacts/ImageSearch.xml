@@ -1,11 +1,12 @@
 <component name="ArtifactManager">
-  <artifact type="javafx" name="ImageSearch">
+  <artifact type="javafx" build-on-make="true" name="ImageSearch">
     <output-path>$PROJECT_DIR$/out/artifacts/ImageSearch</output-path>
     <properties id="javafx-properties">
       <options>
         <option name="appClass" value="sample.Main" />
         <option name="description" value="" />
         <option name="htmlPlaceholderId" value="" />
+        <option name="msgOutputLevel" value="Quiet" />
         <option name="nativeBundle" value="exe" />
         <option name="title" value="Search" />
         <option name="vendor" value="" />
@@ -18,10 +19,11 @@
         <element id="directory" name="META-INF">
           <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
         </element>
-        <element id="file-copy" path="$PROJECT_DIR$/libs/sqlite-jdbc-3.23.1.jar" />
-        <element id="library" level="project" name="controlsfx-8.40.14" />
       </element>
-      <element id="directory" name="libs" />
+      <element id="directory" name="libs">
+        <element id="library" level="project" name="controlsfx-8.40.14" />
+        <element id="file-copy" path="$PROJECT_DIR$/libs/sqlite-jdbc-3.23.1.jar" />
+      </element>
     </root>
   </artifact>
 </component>

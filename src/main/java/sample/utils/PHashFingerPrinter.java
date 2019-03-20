@@ -33,8 +33,39 @@ public class PHashFingerPrinter {
     }
 
 
+    private int getMaxSub(String s1, String s2) {
+
+        char[] c1 = s1.toCharArray();
+        char[] c2 = s2.toCharArray();
+        int[][] a = new int[c1.length + 1][c2.length + 1];
+
+        int max = 0;
+        for (int i = 1; i < a.length; i++) {
+            for (int j = 1; j < a[i].length; j++) {
+                if (c1[i - 1] == c2[j - 1]) {
+                    a[i][j] = a[i - 1][j - 1] + 1;
+                    if (a[i][j] > max) {
+                        max = a[i][j];
+                    }
+                }
+            }
+        }
+
+        return max;
+    }
+
+
+    public int hyDistance(String s1, String s2) {
+        int ds1 = distance(s1, s2);
+        int maxSub = getMaxSub(s1, s2);
+        return s1.length() - maxSub + ds1;
+    }
+
 //    public static void main(String[] args) {
-//        System.out.println(new PHashFingerPrinter().distance("1001111001010111011110011111011001110011111111101","1001111001010111011110011111011001110011111111101"));
+//        System.out.println(new PHashFingerPrinter().distance("1001111001010111011110011111011001110011111111101", "1001111001010111011110011111011001110011111111101"));
+//        long start = System.currentTimeMillis();
+//        System.out.println(getMaxSub("1001111001010111011110011111011001110011111111101", "1001111001010111011110011111011001110011111111101"));
+//        System.out.println(System.currentTimeMillis() - start);
 //    }
 
 
@@ -124,7 +155,7 @@ public class PHashFingerPrinter {
         return String.format("%" + (int) (Math.ceil(hex.length() / 4.0)) + "s", hex).trim();
     }
 
-    private BufferedImage resize(BufferedImage image, int width, int height) {
+    public BufferedImage resize(BufferedImage image, int width, int height) {
         BufferedImage resizedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g = resizedImage.createGraphics();
         g.drawImage(image, 0, 0, width, height, null);

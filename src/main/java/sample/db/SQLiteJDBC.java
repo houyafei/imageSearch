@@ -1,13 +1,15 @@
 package sample.db;
 
 
-
 import sample.models.ImageFinger;
 import sample.utils.ConstUtil;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class SQLiteJDBC {
     static {
@@ -27,23 +29,38 @@ public class SQLiteJDBC {
             System.err.println("Connection is null");
             return;
         }
+
+
         PreparedStatement stmt;
         try {
+            byte[] data = getBytes(imageFinger);
             String sql = ConstUtil.SQL_REPLACE_IMAGE_FINGER;
+
             stmt = c.prepareStatement(sql);
             stmt.setString(1, imageFinger.getImageName());
             stmt.setString(2, imageFinger.getImageTags());
             stmt.setString(3, imageFinger.getImageFinger());
             stmt.setString(4, imageFinger.getImageAbsolutePath());
             stmt.setDate(5, imageFinger.getTime());
-            stmt.setInt(6, imageFinger.getDistance());
+            stmt.setBytes(6, data);
+            stmt.setInt(7, imageFinger.getDistance());
             stmt.execute();
             JDBCConnectionUtil.releaseConnection(c, stmt, null);
             System.out.println("insert created successfully");
         } catch (Exception e) {
+            e.printStackTrace();
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
 
+    }
+
+    private static byte[] getBytes(ImageFinger imageFinger) throws IOException {
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        ImageIO.write(imageFinger.getNailImage(), imageFinger.getImageName().substring(imageFinger.getImageName().lastIndexOf(".")+1), bos);
+        bos.flush();
+        byte data[] = bos.toByteArray();
+        bos.close();
+        return data;
     }
 
     public static void batchInsert(ArrayList<ImageFinger> lists) {
@@ -103,8 +120,47 @@ public class SQLiteJDBC {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return list;
+    }
+
+
+    public static BufferedImage queryImage(int imageId) {
+        Connection c = JDBCConnectionUtil.getConnection();
+        if (c == null) {
+            System.err.println("Connection is null or list is empty");
+            return null;
+        }
+        BufferedImage tempImage = null;
+        PreparedStatement stmt;
+        ResultSet resultSet;
+        String sql = ConstUtil.SQL_SELECT_NAIL_IMAGE_BY_ID;
+        try {
+            stmt = c.prepareStatement(sql);
+            stmt.setInt(1, imageId);
+            resultSet = stmt.executeQuery();
+            while (resultSet.next()) {
+                byte[] data = resultSet.getBytes(ConstUtil.KEY_NAILIMAGE);
+                tempImage = getImage(data);
+            }
+
+            JDBCConnectionUtil.releaseConnection(c, stmt, resultSet);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return tempImage;
+    }
+
+    private static BufferedImage getImage(byte[] data) {
+        BufferedImage image = null;
+        try {
+            ByteArrayInputStream arrayInputStream = new ByteArrayInputStream(data);
+            image = ImageIO.read(arrayInputStream);
+            arrayInputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return image;
     }
 
     private static void createTable() {
