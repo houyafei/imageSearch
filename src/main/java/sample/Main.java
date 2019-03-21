@@ -122,7 +122,7 @@ public class Main extends Application {
 
 
         pagination.getStyleClass().add(Pagination.STYLE_CLASS_BULLET);
-        pagination.setPageFactory(value->{
+        pagination.setPageFactory(value -> {
             VBox vBox1 = new VBox();
             vBox1.setAlignment(Pos.CENTER);
             vBox1.setBackground(new Background(new BackgroundImage(new Image("/images/back.jpg"), null, null, BackgroundPosition.CENTER, BackgroundSize.DEFAULT)));
@@ -131,13 +131,18 @@ public class Main extends Application {
             imageView.setFitHeight(500);
             imageView.setFitHeight(700);
             try {
-                imageView.setImage(ImageUtils.bufferImage2Image(ImageIO.read(new File(serviceResult.getListPath().get(value-1)))));
+                if (serviceResult != null) {
+                    imageView.setImage(ImageUtils.bufferImage2Image(ImageIO.read(new File(serviceResult.getListPath().get(value)))));
+                }
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
             vBox1.getChildren().add(imageView);
-            return vBox1 ;
+            return vBox1;
         });
+        pagination.setVisible(false);
+        stackPane.getChildren().add(pagination);
 
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -148,15 +153,7 @@ public class Main extends Application {
         myGrid.setCellFactory(gridView -> {
             ImageGridCell imageGridCell = new ImageGridCell();
             imageGridCell.setOnMouseClicked(event -> {
-                stackPane.getChildren().add(pagination);
-                System.out.println(imageGridCell.getIndex());
-                int index = imageGridCell.getIndex();
-//                try {
-//                    showBigImage.setImage(ImageUtils.bufferImage2Image(ImageIO.read(new File(serviceResult.getListPath().get(index)))));
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-                pagination.setCurrentPageIndex(index + 1);
+                pagination.setVisible(true);
             });
             return imageGridCell;
         });
@@ -194,6 +191,7 @@ public class Main extends Application {
             File file = fileChooser.showOpenDialog(primaryStage);
             if (file != null) {
                 try {
+                    pagination.setVisible(false);
                     srcImage = ImageIO.read(file);
                     imageView.setImage(ImageUtils.bufferImage2Image(srcImage));
                     list.remove(0, list.size());
