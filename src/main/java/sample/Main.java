@@ -4,6 +4,10 @@ import javafx.application.Application;
 
 
 import javafx.application.Platform;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -25,6 +29,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
+import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -95,10 +100,11 @@ public class Main extends Application {
 
 
     private void searchImage(Stage primaryStage) {
+        Background background = new Background(new BackgroundImage(new Image("/images/back.jpg"), null, null, BackgroundPosition.CENTER, BackgroundSize.DEFAULT));
         primaryStage.setTitle("ImageSearch");
         BorderPane root = new BorderPane();
         Scene scene = new Scene(root, 850, 800);
-        root.setBackground(new Background(new BackgroundImage(new Image("/images/back.jpg"), null, null, BackgroundPosition.CENTER, BackgroundSize.DEFAULT)));
+        root.setBackground(background);
         VBox vBox = new VBox();
         MenuBar menuBar = setMenuBar(primaryStage);
         vBox.getChildren().add(menuBar);
@@ -122,23 +128,81 @@ public class Main extends Application {
 
 
         pagination.getStyleClass().add(Pagination.STYLE_CLASS_BULLET);
+        pagination.setBackground(background);
         pagination.setPageFactory(value -> {
+            String filePath = null;
             VBox vBox1 = new VBox();
             vBox1.setAlignment(Pos.CENTER);
-            vBox1.setBackground(new Background(new BackgroundImage(new Image("/images/back.jpg"), null, null, BackgroundPosition.CENTER, BackgroundSize.DEFAULT)));
+//            vBox1.setBackground();
 
             ImageView imageView = new ImageView();
-            imageView.setFitHeight(500);
-            imageView.setFitHeight(700);
-            try {
-                if (serviceResult != null) {
-                    imageView.setImage(ImageUtils.bufferImage2Image(ImageIO.read(new File(serviceResult.getListPath().get(value)))));
-                }
+            ScrollPane scrollPane = new ScrollPane();
+            scrollPane.setPrefSize(pagination.getWidth(),pagination.getHeight());
+            AnchorPane anchorPane = new AnchorPane();
+            DoubleProperty zoomProperty = new SimpleDoubleProperty(200);
 
-            } catch (IOException e) {
-                e.printStackTrace();
+            zoomProperty.addListener(new InvalidationListener() {
+                @Override
+                public void invalidated(Observable arg0) {
+                    imageView.setFitWidth(zoomProperty.get() * 2);
+                    imageView.setFitHeight(zoomProperty.get() * 3);
+                }
+            });
+            scrollPane.addEventFilter(ScrollEvent.ANY, new EventHandler<ScrollEvent>() {
+                @Override
+                public void handle(ScrollEvent event) {
+                    if (event.getDeltaY() > 0) {
+                        zoomProperty.set(zoomProperty.get() * 1.2);
+                    } else if (event.getDeltaY() < 0) {
+                        zoomProperty.set(zoomProperty.get() / 1.1);
+                    }
+                }
+            });
+            double imageWith = 0;
+            double imageHeight = 0;
+            if (serviceResult != null) {
+                filePath = serviceResult.getListPath().get(value);
+                Image showImage = new Image("file:" + filePath);
+                imageView.setImage(showImage);
+                imageWith = showImage.getWidth();
+                imageHeight = showImage.getHeight();
             }
-            vBox1.getChildren().add(imageView);
+            imageView.preserveRatioProperty().set(true);
+
+
+            AnchorPane.setLeftAnchor(imageView, 20.0);
+            AnchorPane.setTopAnchor(imageView, 10.0);
+            if(imageWith < pagination.getWidth()){
+                AnchorPane.setLeftAnchor(imageView, (pagination.getWidth() - imageWith) / 2);
+                AnchorPane.setRightAnchor(imageView, (pagination.getWidth() - imageWith) / 2);
+            }
+            if (imageHeight < pagination.getHeight()) {
+                AnchorPane.setTopAnchor(imageView, (pagination.getHeight() - imageHeight) / 2);
+                AnchorPane.setBottomAnchor(imageView, (pagination.getHeight() - imageHeight) / 2);
+            }
+
+            anchorPane.getChildren().add(imageView);
+            scrollPane.setContent(anchorPane);
+            imageView.setSmooth(true);
+
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("打开文件");
+            if (filePath!=null){
+                fileChooser.setInitialDirectory(
+//                        filePath.replace(File.separatorChar,'.');
+                        new File(filePath).getParentFile()
+                );
+                fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("All Images", new File(filePath).getName()));
+
+            }
+
+            imageView.setOnMouseClicked(event->{
+
+                    fileChooser.showOpenDialog(primaryStage);
+
+            });
+
+            vBox1.getChildren().add(scrollPane);
             return vBox1;
         });
         pagination.setVisible(false);
@@ -154,6 +218,7 @@ public class Main extends Application {
             ImageGridCell imageGridCell = new ImageGridCell();
             imageGridCell.setOnMouseClicked(event -> {
                 pagination.setVisible(true);
+                pagination.setCurrentPageIndex(imageGridCell.getIndex());
             });
             return imageGridCell;
         });
@@ -277,6 +342,8 @@ public class Main extends Application {
         fileChooser.setInitialDirectory(
                 new File(System.getProperty("user.home"))
         );
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("All Images", "*.*"));
     }
 
     public static void main(String[] args) {
