@@ -92,6 +92,9 @@ public class Main extends Application {
 
     private SearchServiceResult serviceResult = null;
 
+    private Stage imageStage = new Stage();
+    private BorderPane imageRoot = new BorderPane();
+
     @Override
     public void start(final Stage stage) throws Exception {
         searchImage(stage);
@@ -127,6 +130,13 @@ public class Main extends Application {
         addSearchPane(root, primaryStage);
 
 
+        showImage(background);
+
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    private void showImage(Background background) {
         pagination.getStyleClass().add(Pagination.STYLE_CLASS_BULLET);
         pagination.setBackground(background);
         pagination.setPageFactory(value -> {
@@ -137,25 +147,19 @@ public class Main extends Application {
 
             ImageView imageView = new ImageView();
             ScrollPane scrollPane = new ScrollPane();
-            scrollPane.setPrefSize(pagination.getWidth(),pagination.getHeight());
+            scrollPane.setPrefSize(pagination.getPrefWidth(), pagination.getPrefHeight());
             AnchorPane anchorPane = new AnchorPane();
             DoubleProperty zoomProperty = new SimpleDoubleProperty(200);
 
-            zoomProperty.addListener(new InvalidationListener() {
-                @Override
-                public void invalidated(Observable arg0) {
-                    imageView.setFitWidth(zoomProperty.get() * 2);
-                    imageView.setFitHeight(zoomProperty.get() * 3);
-                }
+            zoomProperty.addListener(arg0 -> {
+                imageView.setFitWidth(zoomProperty.get() * 2);
+                imageView.setFitHeight(zoomProperty.get() * 3);
             });
-            scrollPane.addEventFilter(ScrollEvent.ANY, new EventHandler<ScrollEvent>() {
-                @Override
-                public void handle(ScrollEvent event) {
-                    if (event.getDeltaY() > 0) {
-                        zoomProperty.set(zoomProperty.get() * 1.2);
-                    } else if (event.getDeltaY() < 0) {
-                        zoomProperty.set(zoomProperty.get() / 1.1);
-                    }
+            scrollPane.addEventFilter(ScrollEvent.ANY, event -> {
+                if (event.getDeltaY() > 0) {
+                    zoomProperty.set(zoomProperty.get() * 1.2);
+                } else if (event.getDeltaY() < 0) {
+                    zoomProperty.set(zoomProperty.get() / 1.1);
                 }
             });
             double imageWith = 0;
@@ -172,11 +176,11 @@ public class Main extends Application {
 
             AnchorPane.setLeftAnchor(imageView, 20.0);
             AnchorPane.setTopAnchor(imageView, 10.0);
-            if(imageWith < pagination.getWidth()){
+            if (imageWith < pagination.getPrefHeight()) {
                 AnchorPane.setLeftAnchor(imageView, (pagination.getWidth() - imageWith) / 2);
                 AnchorPane.setRightAnchor(imageView, (pagination.getWidth() - imageWith) / 2);
             }
-            if (imageHeight < pagination.getHeight()) {
+            if (imageHeight < pagination.getPrefHeight()) {
                 AnchorPane.setTopAnchor(imageView, (pagination.getHeight() - imageHeight) / 2);
                 AnchorPane.setBottomAnchor(imageView, (pagination.getHeight() - imageHeight) / 2);
             }
@@ -187,18 +191,15 @@ public class Main extends Application {
 
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("打开文件");
-            if (filePath!=null){
-                fileChooser.setInitialDirectory(
-//                        filePath.replace(File.separatorChar,'.');
-                        new File(filePath).getParentFile()
-                );
+            if (filePath != null) {
+                fileChooser.setInitialDirectory(new File(filePath).getParentFile());
                 fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("All Images", new File(filePath).getName()));
 
             }
 
-            imageView.setOnMouseClicked(event->{
+            imageView.setOnMouseClicked(event -> {
 
-                    fileChooser.showOpenDialog(primaryStage);
+                fileChooser.showOpenDialog(imageStage);
 
             });
 
@@ -206,10 +207,9 @@ public class Main extends Application {
             return vBox1;
         });
         pagination.setVisible(false);
-        stackPane.getChildren().add(pagination);
+        imageRoot.setCenter(pagination);
+        imageStage.setScene(new Scene(imageRoot,800,800));
 
-        primaryStage.setScene(scene);
-        primaryStage.show();
     }
 
     private GridView<Image> addGridView() {
@@ -219,6 +219,7 @@ public class Main extends Application {
             imageGridCell.setOnMouseClicked(event -> {
                 pagination.setVisible(true);
                 pagination.setCurrentPageIndex(imageGridCell.getIndex());
+                imageStage.show();
             });
             return imageGridCell;
         });
@@ -226,8 +227,7 @@ public class Main extends Application {
         myGrid.setCellWidth(140);
         myGrid.setHorizontalCellSpacing(5);
         myGrid.setVerticalCellSpacing(5);
-        myGrid.getItems().addListener((ListChangeListener<Image>) c -> {
-        });
+
         return myGrid;
     }
 
